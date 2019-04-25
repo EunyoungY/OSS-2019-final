@@ -1,0 +1,8 @@
+#!/bin/bash
+
+TITLE="$HOSTNAME"
+CURRENT_TIME="$(date +"%x %r %Z")"
+
+cat << EOF
+$TITLE
+$CURRENT_TIME

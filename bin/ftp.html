@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Script to retrieve a file via FTP
+
+FTP_SERVER=ftp.n.debian.org
+FTP_PATH=/debian/dists/stretch/main/installer-amd64/current/images/cdrom REMOTE_TILE=debian-cd_info.tar.gz
+
+ftp -n << EOF
+
+open $FTP_SERVER
+user annonymous me@linuxbox
+cd $FTP_PATH
+hash
+get $REMOTE_FILE
+bye
+EOF
+ls -l "$REMOTE_FILE"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+read -e -p "what is your user name? " -i $USER 
+echo "You answered: '$REPLY'"
